@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.secure"
+    android:versionCode="1"
+    android:versionName="1.0.0">
+
+    <uses-sdk
+        android:minSdkVersion="26"
+        android:targetSdkVersion="34" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:label="SecureApp"
+        android:debuggable="false"
+        android:usesCleartextTraffic="false"
+        android:allowBackup="false">
+
+        <activity
+            android:name=".InternalActivity"
+            android:exported="false" />
+
+        <receiver
+            android:name=".InternalReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.example.secure.ACTION_INTERNAL" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".ProtectedApiService"
+            android:exported="true"
+            android:permission="com.example.secure.permission.INTERNAL_API" />
+
+        <provider
+            android:name=".PrivateContentProvider"
+            android:authorities="com.example.secure.provider"
+            android:exported="false" />
+    </application>
+</manifest>
