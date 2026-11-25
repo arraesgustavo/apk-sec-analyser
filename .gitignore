@@ -1,0 +1,54 @@
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+
+# Packaging and build artifacts
+*.egg-info/
+*.egg
+.eggs/
+build/
+dist/
+wheels/
+pip-wheel-metadata/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Testing and tooling caches
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# APK test artifacts and temporary analysis outputs
+*.apk
+*.apks
+*.aab
+*.dex
+output/
+outputs/
+reports/
+tmp/
+temp/
+.tmp/
+extracted/
+decompiled/
+
+# Editor and OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
