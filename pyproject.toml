@@ -21,7 +21,7 @@ dev = [
 ]
 
 [project.scripts]
-apk-analyzer = "apk_analyzer.cli:main"
+apk-sec-analyser = "apk_analyzer.cli:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

@@ -1,4 +1,4 @@
-"""Command-line interface entrypoint for apk-sec-analyzer."""
+"""Command-line interface entrypoint for apk-sec-analyser."""
 
 from __future__ import annotations
 
@@ -32,7 +32,7 @@ DEFAULT_MODEL = DEFAULT_LLM_MODEL
 DEFAULT_OUTPUT = Path("report.md")
 
 app = typer.Typer(
-    name="apk-analyzer",
+    name="apk-sec-analyser",
     help="Android APK static security analyzer with optional LLM-assisted triage.",
     add_completion=False,
 )
@@ -110,7 +110,7 @@ def _validate_params(
 
 def _run_pipeline(params: AnalysisParams) -> tuple[str, int, Path]:
     """Execute the end-to-end extraction, manifest parsing, triage, and reporting pipeline."""
-    with tempfile.TemporaryDirectory(prefix="apk-analyzer-") as tmp_dir:
+    with tempfile.TemporaryDirectory(prefix="apk-sec-analyser-") as tmp_dir:
         work_dir = Path(tmp_dir)
 
         if params.source_type == "adb":
@@ -234,7 +234,7 @@ def analyze(
 
 
 def main() -> None:
-    """Entrypoint registered in pyproject.toml for the apk-analyzer CLI."""
+    """Entrypoint registered in pyproject.toml for the apk-sec-analyser CLI."""
     app()
 
 

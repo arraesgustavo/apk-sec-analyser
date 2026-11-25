@@ -1,4 +1,4 @@
-"""Integration tests for the apk-analyzer CLI pipeline."""
+"""Integration tests for the apk-sec-analyser CLI pipeline."""
 
 from __future__ import annotations
 
